@@ -1,0 +1,397 @@
+body{
+	font-family: 微软雅黑;
+}
+
+.top{
+	background: #eaeaea;
+	font-family: 微软雅黑;
+	font-size: 14px;
+	height: 25px;
+	line-height: 25px;
+	color: #666;
+}
+
+/* TOP区域 */
+.Mak-Top-S1{
+	width: 100%;
+	height: 100px;
+	float: left;
+	font-family: 幼圆;	
+	box-shadow: 1px 1px 1px #ccc;
+	background: url(../images/Top-Bg.png);
+}
+
+.Mak-Title-area{
+	width: 1000px;
+	height: 90px;
+	margin: 0px auto;
+}
+
+.Mak-Logo{
+	width: 300px;
+	height: 90px;
+	float: left;
+	background: #fff;
+}
+
+.Mak-Logo .logo{
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 40px;
+	font-family: 站酷高端黑;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	background: #ff6815;
+	position: relative;
+	top: 20px;
+	float: left;
+	text-align: center;
+	box-shadow: 1px 1px 1px #888;
+}
+.Mak-Logo span{
+	float: right;
+	display: block;
+	position: relative;
+	top: 30px;
+	padding-top: 8px;
+	padding-right: 4px;
+}
+.Mak-Logo .txt{
+	font-size: 24px;
+	font-family: 幼圆;
+	color: #ff6815;
+	text-decoration: none;
+}
+
+.Mak-Logo .engtxt{
+	font-family: 方正正黑简体;
+	font-size: 16px;
+	text-align: right;
+	color: #ff6815;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+.Mak-Txt{
+	width: 300px;
+	height: 100px;
+	float: left;
+}
+.Mak-Txt a{
+	text-decoration: none;
+	text-align: center;
+	line-height: 100px;
+	font-size: 40px;
+	position: absolute;
+	top:8px;
+	color: #fff;
+	padding-left: 2px;
+
+}
+
+.Mak-Login{
+	float: right;
+	color: #ff6815;
+	padding: 8px;
+	margin-top: 59px;
+	background: #fff;
+
+}
+.Mak-Login a{
+	font-size: 14px;
+	color: #ff6815;
+	padding: 5px;
+	font-weight: 500;
+	text-decoration: none;
+}
+.Mak-Login a:hover{
+	text-decoration: underline;
+}
+
+
+.main{
+	margin-top: 50px;
+}
+.route-color{
+	width: 100%;
+	background: none;
+	border-radius: 0px;
+	float: left;
+	padding-left: 20px;
+	margin: 20px 0px;
+	font-size: 14px;
+
+}
+.route-color a{
+	color: #ccc;
+}
+.sort-nav{
+	padding: 20px;
+	border:1px solid #ccc;
+	color: #999;
+}
+.sort-nav a{
+	color: #000;
+	padding-left: 5px;
+}
+.sort-nav a:hover{
+	color: #ff6815;
+	padding-left: 5px;
+	text-decoration: none;
+}
+.search-bar{
+	width: 50%;
+	margin-top: 30px;
+}
+.trade-content{
+	margin-top: 10px;
+
+}
+.trade-top{
+	padding: 10px 0px;
+	border: 1px solid #ccc;
+}
+.trade-top input{
+	width: 60px;
+}
+.trade-top span{
+	padding-left: 20px;
+}
+.trade-top nav>a{
+	height: 32px;
+	padding-left: 20px;
+	text-decoration: none;
+	color: #000;
+	font-family: 微软雅黑;
+}
+.trade-top nav>a:hover{
+	color: #ccc;
+	cursor: pointer;
+	color: #e00000;
+}
+.trade-top nav>a:focus{
+	color: #ccc;
+	cursor: pointer;
+	color: #e00000;
+}
+
+
+.item1{
+	width: 100%;
+	float: left;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: #ccc;
+	padding-right: 5%;
+	padding: 30px 0px 30px 0px;
+}
+.item1 span{
+	display: block;
+	margin-top: 0px;
+}
+
+ .item-price{
+ 	display: block;
+ 	float: right;
+ }
+
+.buy-btn{
+	background: #fff;
+	border-color: #e00000;
+}
+
+.item1 span img{
+	width: 120px;
+	height: 120px;
+	float: left;
+}
+.item1 span p{
+	width: 65%;
+	float: left;
+	margin-left: 10px;
+}
+span .title{
+	height: 60px;
+	overflow: hidden;
+}
+.item1 span p a{
+	text-decoration: none;
+	color: #000;
+}
+.item1 span p a:hover{
+	text-decoration: none;
+	color: #ff6815;
+}
+
+.page-content{
+	width: 100%;
+	margin-top: 50px;
+	float: left;
+}
+.page-nav{
+	width: 640px;
+	margin: 0px auto;
+}
+.page-none{
+	margin: 0px !important;
+	border: 0px !important;
+}
+.page-nav li a{
+	width: 80px !important;
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 0px !important;
+	color: #000;
+	margin: 0px;
+}
+
+.page-nav li a:hover{
+	width: 80px !important;
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 0px !important;
+	background: #ff6815;
+	color: #fff;
+}
+.price-text{
+	font-size: 18px;
+	color: #e00000 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{	
+	width: 100%;
+	float: left;
+	margin-top: 120px;
+}
+.service{
+	height: 180px;
+
+}
+.service{
+	width: 1000px;
+	height: 100px;
+	margin: 0px auto;
+}
+.service1{
+	width: 24%;
+	height: 100px;
+	border-width: 0px 1px 0px 0px;
+	border-style: solid;
+	color: #999;
+	float: left;
+}
+.service1:hover{
+	opacity: 0.6;
+	cursor: pointer;
+}
+.service1>img{
+	float: left;
+	margin-top: 12px;
+	padding-left: 12px;
+}
+.service1>span{
+	display: block;
+	float: left;
+	font-family: 微软雅黑;
+	padding-top: 30px;
+	padding-left: 10px;
+	color: #000;
+}
+.service1>span>p>a{
+	text-decoration: none;
+	color: #666;
+}
+.service1>span>p>a:hover{
+	text-decoration: none;
+	color: #000;
+
+}
+.ser-title{
+	font-size: 18px;
+	color: #666 !important;
+}
+.spe-ser{
+	border-width: 0px;
+}
+
+.copyright>p{
+	padding-top: 50px;
+}
+.copyright a{
+	color: #666;
+	text-decoration: none;
+}
+
+
+
+
+
+@media (min-width: 360px) {
+  .modal-dialog {
+    width: 370px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+  .QR-code{
+	float: left;
+	margin-left: 10px;
+}
+.modal-header>h3{
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.checkbox{
+	text-align: right;
+	font-size: 14px;
+	font-weight: normal;
+}
+.help-link{
+	color: #333;
+	font-size: 14px;
+	padding-top: 10px;
+	cursor: pointer;
+
+}
+.help-link a{
+	color: #333;
+	font-size: 14px;
+
+}
+.modal-header{
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+}
+
+.write-area{
+	margin: 10% 0% 0% 10%;
+}
+.passwords{
+	margin-top: 5px;
+}
+.btn-span{
+	display: block;
+	margin-top: 40%;
+}
+

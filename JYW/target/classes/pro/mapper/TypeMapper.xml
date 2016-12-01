@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pro.inter.TypeMapper" >
+  <resultMap id="BaseResultMap" type="pro.model.Type" >
+    <id column="tp_id" property="tpId" jdbcType="INTEGER" />
+    <result column="tp_name" property="tpName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    tp_id, tp_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from type
+    where tp_id = #{tpId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from type
+    where tp_id = #{tpId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="pro.model.Type" >
+    <selectKey resultType="java.lang.Integer" keyProperty="tpId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into type (tp_name)
+    values (#{tpName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="pro.model.Type" >
+    <selectKey resultType="java.lang.Integer" keyProperty="tpId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into type
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tpName != null" >
+        tp_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tpName != null" >
+        #{tpName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="pro.model.Type" >
+    update type
+    <set >
+      <if test="tpName != null" >
+        tp_name = #{tpName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where tp_id = #{tpId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="pro.model.Type" >
+    update type
+    set tp_name = #{tpName,jdbcType=VARCHAR}
+    where tp_id = #{tpId,jdbcType=INTEGER}
+  </update>
+</mapper>

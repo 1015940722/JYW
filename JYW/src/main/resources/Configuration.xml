@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases> 
+        <typeAlias alias="User" type="pro.model.User"/>
+        <typeAlias alias="Admin" type="pro.model.Admin"/>
+        <typeAlias alias="Shoucang" type="pro.model.Shoucang"/>
+        <typeAlias alias="Type" type="pro.model.Type"/>
+        <typeAlias alias="Things" type="pro.model.Things"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="pro/mapper/UserMapper.xml"/>    
+        <mapper resource="pro/mapper/AdminMapper.xml"/> 
+        <mapper resource="pro/mapper/ShoucangMapper.xml"/> 
+        <mapper resource="pro/mapper/TypeMapper.xml"/> 
+        <mapper resource="pro/mapper/ThingsMapper.xml"/> 
+    </mappers>
+</configuration>

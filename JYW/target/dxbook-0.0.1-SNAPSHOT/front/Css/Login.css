@@ -1,0 +1,151 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #fff;
+}
+.container{
+  width: 1000px;
+  margin: 0px auto;
+}
+.Login-Page{
+  width: 50%;
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  z-index: 1000;
+}
+
+.dialog-area{
+  width: 300px;
+  margin-top: 20px;
+  margin: 20px auto 0px auto;
+}
+
+.login-nav{
+  width: 300px;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+  border-radius: 5px;
+  border-width: 0px 0px 1px 0px;
+  border-color: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.2);
+}
+
+.login-nav li{
+  width: 150px;
+  padding: 0px;
+  margin: 0px auto;
+  border-width: 0px 0px 1px 0px;
+}
+
+.login-nav li a{
+  color: #fff;
+  font-size: 16px;
+  font-family: 幼圆;
+}
+
+
+.login-nav li a:hover,
+.login-nav li a:focus
+{
+
+   outline:none;
+   color: #000;
+   border:0px;
+}
+.login-nav li a:after{
+  background: none;
+}
+.login-input{
+  width: 300px;
+  padding: 0px;
+  margin: 0px auto;
+}
+
+.login-input input{
+  height: 45px;
+  padding: 0px 10px;
+  font-size: 14px;
+}
+
+.login-checkbox{
+  width: 300px;
+  font-family: 幼圆;
+}
+
+.btn-submit{
+  width: 300px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 幼圆;
+  background: #ff6815;
+  border:1px solid #ff6815;
+  box-shadow: 1px 1px 1px rgba(214,85,14,0.5);
+}
+
+.btn-submit:hover{
+  background: #ef6012;
+  color: #fff;
+  border:1px solid #f4600f;
+}
+
+.form-group{
+  margin-left: 0px !important;
+}
+
+
+
+
+/* 轮播图的开始 */
+
+.Mak-Banner-S1{
+  margin: 0px auto;
+  position: relative;
+  z-index: 100;
+
+}
+.imgfocus a{
+  color:#fff;
+  border:0;
+  float: left;
+  text-align: right;
+  text-decoration:none;
+}
+.imgfocus a:hover{
+  color:#b32317;
+  border:0;
+  text-decoration:none;
+}
+.imgfocus ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+img{
+  border:0;
+}
+
+.imgfocus{
+  position:relative;
+  float: left;
+  background:#F1F1F1;
+  margin:0px auto 0 auto;
+}
+
+.imgfocus .imgbox{
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+.decoimg_b2{
+  position:relative;
+  float:left;
+  display:none;
+}
+.Log-Bg{
+  display:block;
+}
+
+/* 轮播图的结束 */

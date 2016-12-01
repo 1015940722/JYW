@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pro.inter.AdminMapper" >
+  <resultMap id="BaseResultMap" type="pro.model.Admin" >
+    <id column="a_id" property="aId" jdbcType="INTEGER" />
+    <result column="a_password" property="aPassword" jdbcType="VARCHAR" />
+    <result column="a_username" property="aUsername" jdbcType="VARCHAR" />
+    <result column="a_logintime" property="aLogintime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    a_id, a_password, a_username, a_logintime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from admin
+    where a_id = #{aId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from admin
+    where a_id = #{aId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="pro.model.Admin" >
+    <selectKey resultType="java.lang.Integer" keyProperty="aId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into admin (a_password, a_username, a_logintime
+      )
+    values (#{aPassword,jdbcType=VARCHAR}, #{aUsername,jdbcType=VARCHAR}, #{aLogintime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="pro.model.Admin" >
+    <selectKey resultType="java.lang.Integer" keyProperty="aId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into admin
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="aPassword != null" >
+        a_password,
+      </if>
+      <if test="aUsername != null" >
+        a_username,
+      </if>
+      <if test="aLogintime != null" >
+        a_logintime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="aPassword != null" >
+        #{aPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="aUsername != null" >
+        #{aUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="aLogintime != null" >
+        #{aLogintime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="pro.model.Admin" >
+    update admin
+    <set >
+      <if test="aPassword != null" >
+        a_password = #{aPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="aUsername != null" >
+        a_username = #{aUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="aLogintime != null" >
+        a_logintime = #{aLogintime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where a_id = #{aId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="pro.model.Admin" >
+    update admin
+    set a_password = #{aPassword,jdbcType=VARCHAR},
+      a_username = #{aUsername,jdbcType=VARCHAR},
+      a_logintime = #{aLogintime,jdbcType=VARCHAR}
+    where a_id = #{aId,jdbcType=INTEGER}
+  </update>
+</mapper>

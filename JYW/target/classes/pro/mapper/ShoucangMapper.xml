@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pro.inter.ShoucangMapper" >
+  <resultMap id="BaseResultMap" type="pro.model.Shoucang" >
+    <id column="s_id" property="sId" jdbcType="INTEGER" />
+    <result column="s_a_id" property="sAId" jdbcType="INTEGER" />
+    <result column="shoucangcol" property="shoucangcol" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    s_id, s_a_id, shoucangcol
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from shoucang
+    where s_id = #{sId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shoucang
+    where s_id = #{sId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="pro.model.Shoucang" >
+    <selectKey resultType="java.lang.Integer" keyProperty="sId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into shoucang (s_a_id, shoucangcol)
+    values (#{sAId,jdbcType=INTEGER}, #{shoucangcol,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="pro.model.Shoucang" >
+    <selectKey resultType="java.lang.Integer" keyProperty="sId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into shoucang
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="sAId != null" >
+        s_a_id,
+      </if>
+      <if test="shoucangcol != null" >
+        shoucangcol,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="sAId != null" >
+        #{sAId,jdbcType=INTEGER},
+      </if>
+      <if test="shoucangcol != null" >
+        #{shoucangcol,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="pro.model.Shoucang" >
+    update shoucang
+    <set >
+      <if test="sAId != null" >
+        s_a_id = #{sAId,jdbcType=INTEGER},
+      </if>
+      <if test="shoucangcol != null" >
+        shoucangcol = #{shoucangcol,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where s_id = #{sId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="pro.model.Shoucang" >
+    update shoucang
+    set s_a_id = #{sAId,jdbcType=INTEGER},
+      shoucangcol = #{shoucangcol,jdbcType=VARCHAR}
+    where s_id = #{sId,jdbcType=INTEGER}
+  </update>
+</mapper>
